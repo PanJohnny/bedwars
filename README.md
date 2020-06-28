@@ -1,2 +1,2 @@
 # bedwars
-a bedwars plugin
+A bedwars plugin
