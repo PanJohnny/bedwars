@@ -1,7 +1,7 @@
 # Bedwars
 A bedwars plugin for minecraft
 
-
+currently working on configuration
 
 <h2>TODO</h1>
 
