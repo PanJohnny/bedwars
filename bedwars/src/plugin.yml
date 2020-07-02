@@ -1,5 +1,24 @@
-author:PanJohnny
-description:A bedwars plugin
-name:Bedwars
-version:1.0
-main:a
+author: PanJohnny
+description: A bedwars plugin
+name: Bedwars
+version: 1.0
+main: com.PanJohnny.minecraft.plugin.bedwars.Main
+#commands
+commands:
+   join:
+      description: Join you to bedwars game
+      permission: bedwars.player
+      usage: /<command>
+   test:   
+      usage: /<command>
+      description: just test
+
+#permissions
+permissions:
+   bedwars.*:
+      description: all bedwars commands
+      children:
+         bedwars.player: true
+   bedwars.player:
+      description: basic player commands
+      

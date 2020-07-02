@@ -14,4 +14,9 @@ public class BedwarsTeam {
 	{
 		return team.hasPlayer(p);
 	}
+	
+	@SuppressWarnings("deprecation")
+	public void addPlayer(Player p) {
+		team.addPlayer(p);
+	}
 }

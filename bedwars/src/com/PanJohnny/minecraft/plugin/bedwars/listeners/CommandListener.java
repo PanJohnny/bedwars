@@ -14,7 +14,7 @@ public class CommandListener implements CommandExecutor{
 	@Override
 	public boolean onCommand(CommandSender sender, Command command, String label, String[] args) 
 	{
-		boolean succes=false;
+		boolean succes=true;
 		if(sender instanceof Player) {
 			Player p= (Player) sender;
 			//build mode
@@ -26,6 +26,12 @@ public class CommandListener implements CommandExecutor{
 					Vars.builder.enableBuildMode(p);
 					p.sendMessage(Vars.prefix+"enabling build mode");
 				}
+			}
+			if(label.equalsIgnoreCase("join")) {
+				p.sendMessage(Vars.prefix+"joining");
+			}
+			if(label.equalsIgnoreCase("test")) {
+				Vars.teams.teams.get(0).addPlayer(p);
 			}
 		}
 		return succes;

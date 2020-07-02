@@ -49,6 +49,8 @@ public class EventListener implements Listener{
 		p.sendMessage(ChatColor.RED+"You cannot enter bed");
 		e.setCancelled(true);
 	}
+	
+	@EventHandler
 	public void onPlayerKill(EntityDeathEvent e) {
 		if(e.getEntity() instanceof Player) {
 			Player p= (Player) e.getEntity();
