@@ -4,7 +4,9 @@ A bedwars plugin for minecraft
 currently working on configuration
 
 +added /world [worldname] for teleporting thru worlds
+
 +added /createworld [worldname] for creating void world
+
 +added dev builds to github
 
 <h2>TODO</h1>
