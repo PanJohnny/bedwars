@@ -28,6 +28,8 @@ public class Main extends JavaPlugin{
 		CommandListener li=new CommandListener();
 		getCommand("join").setExecutor(li);
 		getCommand("test").setExecutor(li);
+		getCommand("createworld").setExecutor(li);
+		getCommand("world").setExecutor(li);
 	}
 	
 	public void loadTeams() {

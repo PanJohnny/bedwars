@@ -1,5 +1,6 @@
 package com.PanJohnny.minecraft.plugin.bedwars.team;
 
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.scoreboard.Team;
 
@@ -18,5 +19,17 @@ public class BedwarsTeam {
 	@SuppressWarnings("deprecation")
 	public void addPlayer(Player p) {
 		team.addPlayer(p);
+	}
+	
+	public ChatColor getColor() {
+		return team.getColor();
+	}
+	
+	public String getName() {
+		return team.getDisplayName();
+	}
+	
+	public String getPrefix() {
+		return team.getPrefix();
 	}
 }

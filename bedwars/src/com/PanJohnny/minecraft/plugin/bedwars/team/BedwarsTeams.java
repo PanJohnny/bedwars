@@ -2,6 +2,7 @@ package com.PanJohnny.minecraft.plugin.bedwars.team;
 
 import java.util.ArrayList;
 
+
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -19,7 +20,7 @@ public class BedwarsTeams {
 		Team newteam=scoreboard.registerNewTeam(name);
 		newteam.setColor(color);
 		newteam.setDisplayName(name);
-		newteam.setPrefix(prefix);
+		newteam.setPrefix(prefix+" ");
 		newteam.setAllowFriendlyFire(false);
 		newteam.setOption(Team.Option.COLLISION_RULE, OptionStatus.FOR_OTHER_TEAMS);
 		newteam.setOption(Option.DEATH_MESSAGE_VISIBILITY, OptionStatus.NEVER);
@@ -35,5 +36,13 @@ public class BedwarsTeams {
 			}
 		}
 		return null;
+	}
+	
+	public boolean isPlayerInSomeTeam(Player p) {
+		for(int i=0;i<teams.size();i++) {
+			BedwarsTeam t = teams.get(i);
+			return t.hasPlayer(p);
+		}
+		return false;
 	}
 }

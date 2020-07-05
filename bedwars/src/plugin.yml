@@ -12,6 +12,12 @@ commands:
    test:   
       usage: /<command>
       description: just test
+   world:
+      usage: '/<command> <name>'
+      desciption: teleport you to the world with world name
+   createworld:
+      usage: '/<command> <name>'
+      desciption: creates world
 
 #permissions
 permissions:
