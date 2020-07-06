@@ -13,12 +13,16 @@ import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerBedEnterEvent;
 
-import com.PanJohnny.minecraft.plugin.bedwars.Vars;
+import com.PanJohnny.minecraft.plugin.bedwars.Main;
 import com.PanJohnny.minecraft.plugin.bedwars.team.BedwarsTeam;
 
 
 public class EventListener implements Listener{
-
+	Main m;
+	public EventListener(Main m) {
+		// TODO Auto-generated constructor stub
+		this.m=m;
+	}
 	@EventHandler
 	public void onBedBreak(BlockBreakEvent e) 
 	{
@@ -30,8 +34,8 @@ public class EventListener implements Listener{
 	{
 		Player placer = e.getPlayer();
 		Block b=e.getBlock();
-		if(Vars.builder.isInBuildMode(placer)) {
-			Vars.builder.addBlock(b);
+		if(m.builder.isInBuildMode(placer)) {
+			m.builder.addBlock(b);
 		}
 	}
 
@@ -40,8 +44,8 @@ public class EventListener implements Listener{
 	{
 		Player placer = e.getPlayer();
 		Block b=e.getBlock();
-		if(Vars.builder.isInBuildMode(placer)) {
-			Vars.builder.removeBlock(b);
+		if(m.builder.isInBuildMode(placer)) {
+			m.builder.removeBlock(b);
 		}
 	}
 	@EventHandler
@@ -70,14 +74,14 @@ public class EventListener implements Listener{
 
 		ChatColor c=ChatColor.RESET;
 		ChatColor c2=ChatColor.RESET;
-		if(Vars.teams.isPlayerInSomeTeam(p)) {
-			BedwarsTeam team=Vars.teams.getTeamByPlayer(p);
+		if(m.teams.isPlayerInSomeTeam(p)) {
+			BedwarsTeam team=m.teams.getTeamByPlayer(p);
 			c=team.getColor();
 			prefix=team.getPrefix();
 		}
 		if(en!=null & en instanceof Player) {
-			if(Vars.teams.isPlayerInSomeTeam((Player)en)) {
-				BedwarsTeam team=Vars.teams.getTeamByPlayer((Player)en);
+			if(m.teams.isPlayerInSomeTeam((Player)en)) {
+				BedwarsTeam team=m.teams.getTeamByPlayer((Player)en);
 				c2=team.getColor();
 				prefix2=team.getPrefix();
 			}
@@ -91,8 +95,8 @@ public class EventListener implements Listener{
 		String prefix="";
 		ChatColor color=ChatColor.RESET;
 		Player p = e.getPlayer();
-		if(Vars.teams.isPlayerInSomeTeam(p)) {
-			BedwarsTeam tm=Vars.teams.getTeamByPlayer(p);
+		if(m.teams.isPlayerInSomeTeam(p)) {
+			BedwarsTeam tm=m.teams.getTeamByPlayer(p);
 			prefix=tm.getPrefix();
 			color=tm.getColor();
 		}

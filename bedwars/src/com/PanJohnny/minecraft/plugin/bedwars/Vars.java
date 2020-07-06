@@ -11,7 +11,5 @@ import com.PanJohnny.minecraft.plugin.bedwars.team.BedwarsTeams;
 
 
 public class Vars {
-	public static final Builder builder = new Builder();
 	public static final String prefix = ChatColor.AQUA+"[BW] "+ChatColor.RESET;
-	public static final BedwarsTeams teams=new BedwarsTeams();
 }
