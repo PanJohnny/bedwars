@@ -1,6 +1,6 @@
 # Bedwars
 A bedwars plugin for minecraft
-
+## This project is abandoned and never be finished
 currently working on configuration
 
 +added /world [worldname] for teleporting thru worlds
